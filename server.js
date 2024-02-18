@@ -4,8 +4,12 @@ const http = require('http');
 app = express()
 server = http.createServer(app);
 
-app.get('/login.html', function (req, res) {
-  res.send("로그인 화면에 도달했습니다")
+app.get('/', function(req, res){
+  console.log("서버와 연결됨");
+});
+
+app.get('/login', function (req, res) {
+  res.sendFile('login.html');
 });
 
 server.listen(8000, function () {
