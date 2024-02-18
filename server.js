@@ -1,12 +1,12 @@
 const express = require('express');
 const http = require('http');
-const PORT = 3000;
+const PORT = 8000;
 
 app = express()
 server = http.createServer(app);
 
-app.get('/', function(req, res){
-  console.log("서버와 연결됨");
+app.get('/', function(req, res) {
+  res.sendFile('index.html');
 });
 
 app.get('/login', function (req, res) {
