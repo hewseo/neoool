@@ -2,8 +2,8 @@ const express = require('express');
 const http = require('http');
 const PORT = 3000;
 
-app = express()
-server = http.createServer(app);
+const app = express()
+const server = http.createServer(app);
 
 app.get('/', function(req, res) {
  // res.sendFile('index.html');
